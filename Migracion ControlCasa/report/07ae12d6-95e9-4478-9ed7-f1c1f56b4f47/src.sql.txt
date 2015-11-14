@@ -1,0 +1,5 @@
+CREATE TABLE `ciudad` (
+  `idCiudad` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreCiudad` varchar(100) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idCiudad`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

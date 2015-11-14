@@ -1,0 +1,5 @@
+CREATE TABLE `tipoinmueble` (
+  `idTipo` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreTipo` varchar(50) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idTipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

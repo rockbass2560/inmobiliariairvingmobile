@@ -1,0 +1,12 @@
+CREATE TABLE `reporteactividad` (
+  `idReporteActividad` int(11) NOT NULL AUTO_INCREMENT,
+  `idCasa` int(11) NOT NULL,
+  `fechaReporte` date NOT NULL,
+  `clienteReporte` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `comentariosReporte` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `publicidadReporte` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `comentarioProfesionalReporte` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`idReporteActividad`),
+  KEY `casaReporte` (`idCasa`),
+  CONSTRAINT `casaReporte` FOREIGN KEY (`idCasa`) REFERENCES `casa` (`idCasa`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

@@ -1,0 +1,5 @@
+CREATE TABLE `tipotransaccion` (
+  `idTipoTransaccion` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreTipoTransaccion` varchar(45) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idTipoTransaccion`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

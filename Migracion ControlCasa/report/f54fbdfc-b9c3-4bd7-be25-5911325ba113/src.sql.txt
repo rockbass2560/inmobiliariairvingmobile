@@ -1,0 +1,5 @@
+CREATE TABLE `colonia` (
+  `idColonia` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreColonia` varchar(300) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idColonia`)
+) ENGINE=InnoDB AUTO_INCREMENT=479 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

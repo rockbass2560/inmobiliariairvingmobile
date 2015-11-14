@@ -1,0 +1,31 @@
+﻿/* Pagina de detalle */
+.encabezadoH2Verde
+{
+	color:Green;
+	font-size:x-large;
+	font-weight:bold;
+}
+.negrita
+{
+	font-weight:bold;
+}
+
+/* Pagina de resultado */
+.row
+{
+	background-color:white;
+}
+.rowAlternativo
+{
+	background-color:#DFDDDE;
+}
+.centrarDiv
+{
+	max-width:50em;
+	margin: 0 auto 0 auto;
+}
+.imageLogo
+{
+    height:8em;
+    width:10em;
+}

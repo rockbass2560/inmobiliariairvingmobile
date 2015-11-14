@@ -1,0 +1,5 @@
+CREATE TABLE `forma` (
+  `idForma` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreForma` varchar(45) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`idForma`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

@@ -1,0 +1,10 @@
+CREATE TABLE `prospectocasa` (
+  `idProspectoCasa` int(11) NOT NULL AUTO_INCREMENT,
+  `idProspecto` int(11) NOT NULL,
+  `idCasa` int(11) NOT NULL,
+  PRIMARY KEY (`idProspectoCasa`),
+  KEY `prosCas` (`idCasa`),
+  KEY `pros` (`idProspecto`),
+  CONSTRAINT `pros` FOREIGN KEY (`idProspecto`) REFERENCES `prospecto` (`idProspecto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `prosCas` FOREIGN KEY (`idCasa`) REFERENCES `casa` (`idCasa`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

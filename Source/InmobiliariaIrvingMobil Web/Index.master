@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" EnableViewState="true" CodeFile="Index.master.cs" Inherits="Index" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inmobiliaria Irving</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/jquery.mobile-1.2.0.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet" type="text/css" />
+    
+    <link href="css/GeneralStyle.css" type="text/css" rel="Stylesheet" />
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    
+    <script type="text/javascript">
+        $(document).on("mobileinit", function() {
+            $.mobile.ajaxEnabled = false;
+        });
+        //Funciones a ejecutar cuando el DOM este listo
+        $(document).ready(function () {
+            //Se elimina cualquier etiqueta agregada en body que no sea form
+            //Esto es debido a publicidad que inserta el servidor
+            $(document.body).children().each(function () {
+                var tag = $(this);
+                if (!tag.is("form")) {
+                    tag.remove();
+                };
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="div" data-role="page" data-theme="d" data-title="Inmobiliaria Irving">
+        <div data-theme="d" data-role="header">
+            <div style="text-align:center;">
+                <img class="imageLogo" src="images/logoinmobiliaria.png" alt="Inmobiliaria Irving" />
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><a data-icon="home" href="Default.aspx">Inmuebles</a></li>
+                    <li><a data-icon="chat" href="contactos.aspx">Contacto</a></li>
+                    <li><a data-icon="grid" href="administracion/Panel.aspx">Administracion</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentDiv" data-role="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div data-theme="d" data-role="footer">
+            <asp:ContentPlaceHolder runat="server" ID="footer">
+            </asp:ContentPlaceHolder>
+            <a href="#divPresentacion">Autor</a>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder runat="server" ID="ContentPopup">
+    </asp:ContentPlaceHolder>
+    <div data-role="dialog" id="divPresentacion">
+        <div data-role="header">
+        </div>
+        <div data-role="content">
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <img src="images/fotografia.jpg" style="height:6em;width:6em;" alt="Francisco Gonzalez Hernandez" />
+                    </td>
+                    <td>
+                        <b>Pagina Realizada Por:</b><br />
+                        <b>Francisco Gonzalez Hernandez</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span style="color:Blue;"><b>franciscogonzalez_hernandez@hotmail.com</b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b><a href="tel:6672704439" alt="telefono">(667) 2704439</a></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b>
+                            <p>
+                                Conocimientos en Web, HTML, JavaScript, JQuery, JQuery Mobile, ASP.Net, Sql Server.
+                                <br />
+                                <br />
+                                Profesional dedicado a las tecnologias Microsoft y Web
+                            </p>
+                        </b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div data-role="footer">
+             <a href="#contentDiv" data-iconpos="left" data-icon="back" data-rel="back" data-role="button"
+                data-direction="reverse">Cerrar</a>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

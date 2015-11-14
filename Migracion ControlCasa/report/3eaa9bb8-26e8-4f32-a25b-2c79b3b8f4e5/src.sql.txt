@@ -1,0 +1,14 @@
+CREATE TABLE `prospecto` (
+  `idProspecto` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreProspecto` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `direccionProspecto` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `telefonoProspecto` varchar(60) CHARACTER SET utf8 DEFAULT NULL,
+  `formaPago` int(11) NOT NULL,
+  `correoProspecto` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `altaProspecto` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `modificacionProspecto` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `notaProspecto` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`idProspecto`),
+  KEY `formaP` (`formaPago`),
+  CONSTRAINT `formaP` FOREIGN KEY (`formaPago`) REFERENCES `formapago` (`idFormaPago`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci

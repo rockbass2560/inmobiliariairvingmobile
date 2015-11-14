@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Formatos>
+  <Formato result="CasasResult">
+    <Elemento propiedad="TipoTransaccion" clave="Venta" valor="Vende" />
+    <Elemento propiedad="TipoInmueble" clave="Casa Sola" valor="Casa" />
+  </Formato>
+  <Formato result="CasasResultById">
+    <Elemento propiedad="TipoTransaccion" clave="Venta" valor="Vende" />
+    <Elemento propiedad="TipoInmueble" clave="Casa Sola" valor="Casa" />
+  </Formato>
+</Formatos>
